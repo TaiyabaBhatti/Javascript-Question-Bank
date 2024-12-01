@@ -7,7 +7,7 @@ const kCtx = kaplay({
     global:false,
     background:[0,0,0],
     buttons:{
-        jumpUp:{
+        jump:{
             keyboard:["space"],
             mouse:"left",
         }, 
@@ -16,4 +16,4 @@ const kCtx = kaplay({
     debug:true,
 });
 
-export default kCtx;
+ export default kCtx;
