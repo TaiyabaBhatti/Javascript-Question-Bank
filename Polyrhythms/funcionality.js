@@ -9,11 +9,21 @@ const ctx = canvasElement.getContext("2d");
 let trackCenter = {x:canvasSize/2,y:canvasSize/2};
 let trackRadius = 100;
 let ballRadius = 8;
-let ballSpeed = 0.8;
+let ballSpeed = 0.01;
 const track = new Track(trackCenter,trackRadius)
 const ball = new Ball(track,ballRadius, ballSpeed);
-track.draw(ctx);
-ball.draw(ctx);
 
+
+animate()
+
+// animate ball accoding to the track
+
+function animate(){
+    ctx.clearRect(0,0,canvasSize,canvasSize);
+    track.draw(ctx);
+    ball.move();
+    ball.draw(ctx);
+    requestAnimationFrame(animate)
+}
 
 
